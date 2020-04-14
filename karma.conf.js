@@ -26,6 +26,12 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chrome'],
+    customLaunchers: {
+      ChromeForWSL: {
+        base: 'Chrome',
+        flags: ['--no-sandbox', '--disable-features=VizDisplayCompositor']
+      }
+    },
     singleRun: false,
     restartOnFileChange: true
   });
